@@ -6,8 +6,8 @@ from openpyxl import load_workbook
 workbook = load_workbook(filename="imeis.xlsx")
 sheet = workbook.active
 
-#open website
-browser = webdriver.Chrome("C:\\Users\\General Shephard\Desktop\\Internet Ex\\Chrome Drivers\\chromedriver.exe")
+#open website and use location of chrome drivers directory
+browser = webdriver.Chrome("chromedriver.exe")
 browser.get("http://mobility.telus.com/devicecompatibilitycheck/input.do?locale=en")
 
 def check(imei):
